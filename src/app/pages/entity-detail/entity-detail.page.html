@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{entity.moduleName}} / {{entity.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Nombre: </ion-label>
+    <ion-input value="{{entity.name}}" ></ion-input>
+  </ion-item>
+  <ion-nav-link [routerLink]='["events", entity.id]'>{{entity.eventsCount}}  eventos</ion-nav-link>
+  <ion-nav>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-title>Nav</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item button (click)="showDetail(entity.id)">
+          <ion-icon slot="start" name="cube" ></ion-icon>
+          <ion-label>
+            <h3>Eventos</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item button (click)="showDetail(entity.id)">
+          <ion-icon slot="start" name="cube" ></ion-icon>
+          <ion-label>
+            <h3>Eventos</h3>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-nav>
+</ion-content>

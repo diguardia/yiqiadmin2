@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><ion-icon name="cube"></ion-icon> Entidades</ion-title>
+    <ion-searchbar (ionChange)="onSearchTerm($event)" ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ng-container *ngFor="let entity of entities as entities; index as i">
+      <ng-container *ngIf="i==0 || entities[i-1].moduleName != entity.moduleName">
+        <ion-item-divider color="primary" >
+          {{entity.moduleName}}
+        </ion-item-divider>
+      </ng-container>
+      <ion-item [routerLink]="['/entities/',entity.id]">{{entity.title}}</ion-item>
+    </ng-container> 
+    
+  </ion-list>
+
+</ion-content>
+

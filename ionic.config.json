@@ -1,5 +1,7 @@
 {
   "name": "yiqiadmin",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
