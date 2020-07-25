@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>entity-attributes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [dragula]='"bag-one"' [dragulaModel]='attributes'>
+    <div *ngFor="let att of attributes" class="example-box" >
+      <div style="width:30%;display: inline-block"><label >{{att.title}}</label></div><input style="width:60%" style="display: inline-block"/>
+    </div>
+  </div>
+</ion-content>

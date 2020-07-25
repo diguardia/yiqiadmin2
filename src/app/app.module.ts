@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule }    from '@angular/common/http';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragulaModule, DragulaService  } from 'ng2-dragula';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +21,9 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    DragulaModule.forRoot()
   ],
   providers: [
     StatusBar,

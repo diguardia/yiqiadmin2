@@ -5,11 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label>Nombre: </ion-label>
-    <ion-input value="{{entity.name}}" ></ion-input>
-  </ion-item>
-  <ion-nav-link [routerLink]='["events", entity.id]'>{{entity.eventsCount}}  eventos</ion-nav-link>
+  <ion-nav-link [routerLink]='["events", entity.id]'>{{entity.eventsCount}} eventos</ion-nav-link>
   <ion-nav>
     <ion-header translucent>
       <ion-toolbar>
@@ -17,20 +13,67 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-list>
-        <ion-item button (click)="showDetail(entity.id)">
-          <ion-icon slot="start" name="cube" ></ion-icon>
-          <ion-label>
-            <h3>Eventos</h3>
-          </ion-label>
-        </ion-item>
-        <ion-item button (click)="showDetail(entity.id)">
-          <ion-icon slot="start" name="cube" ></ion-icon>
-          <ion-label>
-            <h3>Eventos</h3>
-          </ion-label>
-        </ion-item>
-      </ion-list>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Nombre</ion-label>
+            <ion-input name="name" [(ngModel)]="entity.name" ></ion-input>
+          </ion-item>
+
+        </ion-col>
+        <ion-col>
+          <ion-list>
+            <ion-item button [routerLink]="['/entity-attributes/',entity.id]">
+              <ion-icon slot="start" name="list"></ion-icon>
+              <ion-label>
+                <h3>Atributos</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item button (click)="showDetail(entity.id)">
+              <ion-icon slot="start" name="git-branch"></ion-icon>
+              <ion-label>
+                <h3>Workflow</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item button (click)="showDetail(entity.id)">
+              <ion-icon slot="start" name="flash"></ion-icon>
+              <ion-label>
+                <h3>Eventos</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item button (click)="showDetail(entity.id)">
+              <ion-icon slot="start" name="document-text"></ion-icon>
+              <ion-label>
+                <h3>Reportes</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item button (click)="showDetail(entity.id)">
+              <ion-icon slot="start" name="ribbon"></ion-icon>
+              <ion-label>
+                <h3>Validaciones</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item button (click)="showDetail(entity.id)">
+              <ion-icon slot="start" name="people"></ion-icon>
+              <ion-label>
+                <h3>Entidades hijas</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item button (click)="showDetail(entity.id)">
+              <ion-icon slot="start" name="albums"></ion-icon>
+              <ion-label>
+                <h3>Pestañas</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item button [routerLink]="['/entity-functions/',entity.id]">
+              <ion-icon slot="start" name="code-working"></ion-icon>
+              <ion-label>
+                <h3>Funciones</h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
     </ion-content>
 
   </ion-nav>

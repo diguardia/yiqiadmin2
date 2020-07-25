@@ -81,4 +81,9 @@ export class AuthService {
       }
     );
   }
+  getHttpHeaders() { 
+    return new HttpHeaders({
+      'Authorization': this.token["token_type"]+" "+this.token["access_token"]
+    });
+  }
 }

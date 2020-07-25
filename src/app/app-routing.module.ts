@@ -35,6 +35,18 @@ const routes: Routes = [
     path: 'entity-detail',
     loadChildren: () => import('./pages/entity-detail/entity-detail.module').then( m => m.EntityDetailPageModule)
   },
+  {
+    path: 'entity-functions/:id',
+    loadChildren: () => import('./pages/entity-functions/entity-functions.module').then( m => m.EntityFunctionsPageModule)
+  },
+  {
+    path: 'entity-attributes/:id',
+    loadChildren: () => import('./pages/entity-attributes/entity-attributes.module').then( m => m.EntityAttributesPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+  },
 ];
 
 @NgModule({

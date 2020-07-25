@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{entity.moduleName}} / {{entity.title}} / Funciones
+    <ion-button color="primary" size="small" (click)="saveFunctions()">Guardar</ion-button>
+  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ngx-monaco-editor style="height: 78%" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+  <textarea style="height: 20%; width:100%;color:white;background:black" readonly="readonly" [(ngModel)]="log"></textarea>
+</ion-content>

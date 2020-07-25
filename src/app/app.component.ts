@@ -14,6 +14,11 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
+      title: 'Inicio',
+      url: '/dashboar',
+      icon: 'home'
+    },
+    {
       title: 'Módulos',
       url: '/modules',
       icon: 'folder-open'
@@ -25,29 +30,24 @@ export class AppComponent implements OnInit {
     },
 
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
+      title: 'Generar',
+      url: '/build',
       icon: 'paper-plane'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
+      title: 'Usuarios',
+      url: '/users',
+      icon: 'user'
     },
     {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
+      title: 'Perfiles',
+      url: '/roles',
+      icon: 'role'
     },
     {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
-    },
-    {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'Actualizar',
+      url: '/update',
+      icon: 'update'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
