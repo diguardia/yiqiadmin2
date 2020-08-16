@@ -8,12 +8,18 @@ import { EntitiesPageRoutingModule } from './entities-routing.module';
 
 import { EntitiesPage } from './entities.page';
 
+import {FlatTreeControl} from '@angular/cdk/tree';
+import {Component} from '@angular/core';
+import {MatTreeFlatDataSource, MatTreeFlattener, MatTree} from '@angular/material/tree';
+import { MatExpansionModule } from '@angular/material/expansion';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EntitiesPageRoutingModule
+    EntitiesPageRoutingModule,
+    MatExpansionModule
   ],
   declarations: [EntitiesPage]
 })

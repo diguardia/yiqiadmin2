@@ -11,12 +11,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./entity-detail.page.scss'],
 })
 export class EntityDetailPage implements OnInit {
-  entity: Entity;
+  entity: Entity = new Entity();
 
   constructor(private entService: EntityService, private route: ActivatedRoute) {
     this.route.paramMap.subscribe(params => {
-      console.log(params.get('id'))
-      this.entService.getEntityHeader(parseInt(params.get('id'))).subscribe(e => {
+      var id = parseInt(params.get('id'));
+      console.log("Getting header for entity " + id);
+      this.entService.getEntityHeader(id).subscribe(e => {
+        e.id = id;
         this.entity = e;
       })
     });

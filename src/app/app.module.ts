@@ -13,6 +13,8 @@ import { HttpClientModule }    from '@angular/common/http';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragulaModule, DragulaService  } from 'ng2-dragula';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MaterialModule } from './material-module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +25,8 @@ import { DragulaModule, DragulaService  } from 'ng2-dragula';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    DragulaModule.forRoot()
+    DragulaModule.forRoot(),
+    MaterialModule
   ],
   providers: [
     StatusBar,
@@ -31,6 +34,7 @@ import { DragulaModule, DragulaService  } from 'ng2-dragula';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     NativeStorage,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule {}

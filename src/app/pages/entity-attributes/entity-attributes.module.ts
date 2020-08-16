@@ -9,7 +9,7 @@ import { EntityAttributesPageRoutingModule } from './entity-attributes-routing.m
 import { EntityAttributesPage } from './entity-attributes.page';
 
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import { DragulaModule,DragulaService  } from 'ng2-dragula';
+import { DragulaModule  } from 'ng2-dragula';
 
 @NgModule({
   imports: [
@@ -17,7 +17,7 @@ import { DragulaModule,DragulaService  } from 'ng2-dragula';
     FormsModule,
     IonicModule,
     EntityAttributesPageRoutingModule,
-    DragDropModule,DragulaModule,DragulaService
+    DragDropModule,DragulaModule
   ],
   declarations: [EntityAttributesPage]
 })

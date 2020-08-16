@@ -6,8 +6,11 @@
 
 <ion-content>
   <div [dragula]='"bag-one"' [dragulaModel]='attributes'>
-    <div *ngFor="let att of attributes" class="example-box" >
-      <div style="width:30%;display: inline-block"><label >{{att.title}}</label></div><input style="width:60%" style="display: inline-block"/>
-    </div>
+    <ion-item *ngFor="let att of attributes" class="example-box" >
+      <div style="width:30%;display: inline-block">
+        <ion-label >{{att.title}}</ion-label>
+      </div>
+      <input style="width:60%" style="display: inline-block"/>
+    </ion-item>
   </div>
 </ion-content>

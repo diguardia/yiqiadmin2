@@ -37,17 +37,17 @@ export class AppComponent implements OnInit {
     {
       title: 'Usuarios',
       url: '/users',
-      icon: 'user'
+      icon: 'people'
     },
     {
       title: 'Perfiles',
       url: '/roles',
-      icon: 'role'
+      icon: 'medal'
     },
     {
       title: 'Actualizar',
       url: '/update',
-      icon: 'update'
+      icon: 'trending-up'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
